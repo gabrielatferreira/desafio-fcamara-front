@@ -23,7 +23,7 @@ const userAction = async () => {
   if (!checkboxValidation()) return;
 
   console.log("foi clicado")
-  const response = await fetch('http://orangepoint.herokuapp.com/usuarios', {
+  const response = await fetch('https://orangepoint.herokuapp.com/usuarios', {
       method: 'POST',
       headers: {
       'Content-Type': 'application/json'
