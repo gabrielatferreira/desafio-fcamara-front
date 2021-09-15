@@ -21,7 +21,7 @@ window.addEventListener('scroll', function () {
 
 const userActionLogin = async () => {
   console.log("clicou");
-  const response = await fetch('http://orangepoint.herokuapp.com/login', {
+  const response = await fetch('https://orangepoint.herokuapp.com/login', {
       method: 'POST',
       headers: {
       'Content-Type': 'application/json'

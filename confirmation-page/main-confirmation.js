@@ -38,7 +38,7 @@ window.addEventListener('scroll', function () {
 
 const onClickConfirmarReserva = async () => {
   console.log(localStorage.getItem('id_estacao_trabalho'))
-  const response = await fetch('http://orangepoint.herokuapp.com/reservas', {
+  const response = await fetch('https://orangepoint.herokuapp.com/reservas', {
     method: 'POST',
     body: JSON.stringify({
       data_reserva: localStorage.getItem('data_reserva'),

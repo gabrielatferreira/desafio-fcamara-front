@@ -86,7 +86,7 @@ const buscaEstacoesTrabalho = () => {
 }
 
 const getUnidadesNegocio = async () => {
-  const response = await fetch('http://orangepoint.herokuapp.com/unidades_negocio', {
+  const response = await fetch('https://orangepoint.herokuapp.com/unidades_negocio', {
       method: 'GET',
       headers: {
       'Content-Type': 'application/json'
@@ -222,7 +222,7 @@ const acessoLogin = () => {
 }
 
 const getReservasDisponiveis = async () => {
-  const response = await fetch('http://orangepoint.herokuapp.com/reservas/disponiveis', {
+  const response = await fetch('https://orangepoint.herokuapp.com/reservas/disponiveis', {
       method: 'POST',
       body: JSON.stringify({
         data_reserva: data_reserva,
