@@ -93,13 +93,15 @@ body {
 h1 {
   font: 700 var(--title-font-size) var(--body-font-bold);
   color: var(--title-color);
-  text-align: left;
+  text-align: center;
 }
 
 p {
   font: 400 var(--subtitle-font-size) var(--body-font);
   color: var(--text-color-active);
+  margin-left: 5rem;
   width: 200px;
+ 
 }
 
 .title {
@@ -344,9 +346,12 @@ nav.show div.icon-TypeX {
     margin-right: 13.5rem;
   }
 
+  p {
+    margin-left: 6.875rem;
+  }
+
   .text {
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   img {
