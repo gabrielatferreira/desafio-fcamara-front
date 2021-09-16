@@ -131,7 +131,7 @@ const getReservasDisponiveis = async () => {
 
   const myJson = await response.json();
   console.log(myJson);
-  if(myJson != null && myJson != undefined && myJson.length > 0) {
+  if(myJson != null && myJson != undefined && typeof myJson !== 'string' && myJson.length > 0) {
     document.getElementById('sem_agendamentos').style.display = "none";
     for (var index in myJson) {
       document.getElementById("reservas_realizadas").appendChild(createReservasRealizadas(myJson[index], index))
