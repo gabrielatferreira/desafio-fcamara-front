@@ -8,6 +8,26 @@ for (const element of toggle) {
   })
 }
 
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById('myDropdown').classList.toggle('show')
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName('dropdown-content')
+    var i
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i]
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show')
+      }
+    }
+  }
+}
+
 /* quando clicar em um item do menu, esconder o menu */
 const links = document.querySelectorAll('nav ul li a')
 
@@ -37,12 +57,12 @@ window.addEventListener('scroll', function () {
 })
 
 const acessoFazerBooking = () => {
-  document.location.href = "../booking/index-booking.html";
+  document.location.href = '../booking/index-booking.html'
 }
 
 const carregaNomeUsuario = () => {
-  const nome = localStorage.getItem("nome");
-  document.getElementById('nome-usuario').innerHTML = nome;
+  const nome = localStorage.getItem('nome')
+  document.getElementById('nome-usuario').innerHTML = nome
 }
 
-carregaNomeUsuario();
+carregaNomeUsuario()

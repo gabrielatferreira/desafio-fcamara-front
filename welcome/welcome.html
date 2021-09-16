@@ -24,9 +24,11 @@
         <!-- menu -->
         <div class="menu">
           <ul class="grid">
-            <li><a class="title" href="#">Início</a></li>
+            <li><a class="title" href="../welcome/welcome.html">Início</a></li>
             <li>
-              <a class="title" href="../login/index-login.html" id="leave">Sair</a>
+              <a class="title" href="../login/index-login.html" id="leave"
+                >Sair</a
+              >
               <a class="icon-TypeLogout" href="../login/index-login.html"></a>
             </li>
           </ul>
@@ -40,16 +42,61 @@
       <div class="welcome-container">
         <div class="container">
           <h1 class="acess">Boas-vindas, <span id="nome-usuario"></span></h1>
-          <button onclick="acessoFazerBooking()">Fazer agendamento</button>
+          <button onclick="acessoFazerBooking()" class="btn-makebooking">
+            Fazer agendamento
+          </button>
         </div>
         <div class="cards">
           <div class="container">
             <h3>Seus agendamentos</h3>
           </div>
           <div class="container">
+            <p>Você ainda não realizou agendamentos.</p>
+          </div>
+
+          <div class="container">
             <div class="card">
-              <p>Você ainda não realizou agendamentos.</p>
-              <div></div>
+              <div class="card-container">
+                <div class="date">
+                  <div class="menu-more">
+                    <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn"></button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="#home"
+                          ><span class="icon-TypeEdit"></span> Editar</a
+                        >
+                        <a href="#about"
+                          ><span class="icon-TypeDelete"></span> Apagar</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="information">
+                    <label>Dia<span> Mês e ano</span></label>
+                  </div>
+                  <div>
+                    <p id="data_reserva"></p>
+                  </div>
+                </div>
+                <div class="divider-1"></div>
+                <div class="section">
+                  <div class="information">
+                    <i class="icon-TypePlace" id="icon-confirmation"></i>
+                    <h4>Unidade</h4>
+                  </div>
+                  <div>
+                    <p id="unidade_negocio"></p>
+                  </div>
+
+                  <div class="information">
+                    <i class="icon-TypeWork" id="icon-confirmation"></i>
+                    <h4>Estação</h4>
+                  </div>
+                  <div>
+                    <p id="estacao_trabalho"></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
