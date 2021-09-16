@@ -84,5 +84,5 @@ const checkboxValidation = () => {
 }
 
 const acessoLogin = () => {
-  document.location.href = "../login/index-login.html";
+  document.location.href = "../welcome/welcome.html";
 }
