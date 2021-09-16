@@ -366,7 +366,10 @@ nav.show div.icon-TypeX {
   }
 
   .icon-TypeBack-Left {
-    padding-right: 4rem;
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 0.5rem;
   }
 
   .icon-TypeLogout {
@@ -412,12 +415,17 @@ nav.show div.icon-TypeX {
 @media only screen and (min-width: 425px) and (max-device-width: 1199px) {
   main {
     display: flex;
+    justify-content: center;
     max-width: 28rem;
     margin-left: auto;
     margin-right: auto;
   }
 
+  nav.show .menu {
+    width: 40%;
+  }
+
   .icon-TypeBack-Left {
-    padding-right: 7.5rem;
+    padding-right: 3.6rem;
   }
 }
