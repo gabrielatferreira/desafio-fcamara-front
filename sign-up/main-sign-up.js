@@ -15,74 +15,74 @@ function changeHeaderWhenScrool() {
 /* When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScrool()
-});
+})
 
 /* criação de usuários */
 const userAction = async () => {
-  if (!validarSenha()) return;
-  if (!checkboxValidation()) return;
+  if (!validarSenha()) return
+  if (!checkboxValidation()) return
 
-  console.log("foi clicado")
+  console.log('foi clicado')
   const response = await fetch('https://orangepoint.herokuapp.com/usuarios', {
-      method: 'POST',
-      headers: {
+    method: 'POST',
+    headers: {
       'Content-Type': 'application/json'
-      },
-      body: JSON.stringify ({
-          nome: document.getElementById('name').value,
-          email: document.getElementById('email').value,
-          senha: document.getElementById('password').value
-      })
-  });
-  const myJson = await response.json();
-  console.log(myJson);
-  if(myJson.id !== null && myJson.id !== undefined && myJson.id !== "") {
-    localStorage.setItem("nome", myJson.nome);
-    localStorage.setItem("email", myJson.email);
+    },
+    body: JSON.stringify({
+      nome: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      senha: document.getElementById('password').value
+    })
+  })
+  const myJson = await response.json()
+  console.log(myJson)
+  if (myJson.id !== null && myJson.id !== undefined && myJson.id !== '') {
+    localStorage.setItem('nome', myJson.nome)
+    localStorage.setItem('email', myJson.email)
   } else {
-    alert(myJson);
-    return;
+    alert(myJson)
+    return
   }
 
-  limparCampos();
-  sucesso();
-  acessoLogin();
+  limparCampos()
+  sucesso()
+  acessoLogin()
 }
 
 const limparCampos = () => {
-  document.getElementById('name').value = "";
-  document.getElementById('email').value = "";
-  document.getElementById('password').value = "";
-  document.getElementById('passwordagain').value = "";
-  document.getElementById('box-terms').value = "";
+  document.getElementById('name').value = ''
+  document.getElementById('email').value = ''
+  document.getElementById('password').value = ''
+  document.getElementById('passwordagain').value = ''
+  document.getElementById('box-terms').value = ''
 }
 
 const sucesso = () => {
-  alert("Usuário(a) cadastrado com sucesso!");
+  alert('Usuário(a) cadastrado com sucesso!')
 }
 
 const validarSenha = (password, passwordagain) => {
-  var password = document.getElementById('password').value;
-  var passwordagain = document.getElementById('passwordagain').value;
+  var password = document.getElementById('password').value
+  var passwordagain = document.getElementById('passwordagain').value
 
-  if (password != "" && passwordagain != "" && password === passwordagain) {
-    return true;
+  if (password != '' && passwordagain != '' && password === passwordagain) {
+    return true
   } else {
-    alert("As senhas estão diferentes!")
+    alert('As senhas estão diferentes!')
   }
-  return false;
+  return false
 }
 
 const checkboxValidation = () => {
-  var checkbox = document.getElementById('box-terms').checked;
-  if (checkbox == "") {
-      alert("Aceite os termos de uso para se cadastrar.")
+  var checkbox = document.getElementById('box-terms').checked
+  if (checkbox == '') {
+    alert('Aceite os termos de uso para se cadastrar.')
   } else {
-      return true;
+    return true
   }
-  return false;
+  return false
 }
 
 const acessoLogin = () => {
-  document.location.href = "../welcome/welcome.html";
+  document.location.href = '../login/index-login.html'
 }
