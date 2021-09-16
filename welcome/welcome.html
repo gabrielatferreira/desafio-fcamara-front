@@ -50,12 +50,12 @@
           <div class="container">
             <h3>Seus agendamentos</h3>
           </div>
-          <div class="container">
+          <div class="container" id="sem_agendamentos">
             <p>Você ainda não realizou agendamentos.</p>
           </div>
 
-          <div class="container">
-            <div class="card">
+          <div id="reservas_realizadas" class="container">
+            <div id="card_hidden" class="card hidden">
               <div class="card-container">
                 <div class="date">
                   <div class="menu-more">
@@ -72,28 +72,19 @@
                     </div>
                   </div>
                   <div class="information">
-                    <label>Dia<span> Mês e ano</span></label>
-                  </div>
-                  <div>
-                    <p id="data_reserva"></p>
+                    <label id="data_reserva"></label>
                   </div>
                 </div>
                 <div class="divider-1"></div>
                 <div class="section">
                   <div class="information">
                     <i class="icon-TypePlace" id="icon-confirmation"></i>
-                    <h4>Unidade</h4>
-                  </div>
-                  <div>
-                    <p id="unidade_negocio"></p>
+                    <h4 id="unidade_negocio">Unidade</h4>
                   </div>
 
                   <div class="information">
                     <i class="icon-TypeWork" id="icon-confirmation"></i>
-                    <h4>Estação</h4>
-                  </div>
-                  <div>
-                    <p id="estacao_trabalho"></p>
+                    <h4 id="estacao_trabalho">Estação</h4>
                   </div>
                 </div>
               </div>

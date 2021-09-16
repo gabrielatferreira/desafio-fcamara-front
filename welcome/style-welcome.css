@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*======= VARIABLES ============================*/
 :root {
   --header-height: 5rem;
@@ -212,7 +216,7 @@ button:active {
   border-color: var(--body-color-light);
   border-style: solid;
   border-width: 1px;
-  margin-bottom: 8.75rem;
+  margin-bottom: 1.75rem;
 }
 
 #header {
